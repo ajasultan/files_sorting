@@ -29,7 +29,12 @@ def generate_time():
         minutes = '0'+str(minutes)
     else:
         minutes = str(minutes)
-    return '_'+hour+minutes
+    seconds = random.randrange(0,59)
+    if seconds < 10:
+        seconds = '0'+str(seconds)
+    else:
+        seconds = str(seconds)
+    return '_' + hour + minutes + seconds
 
 
 os.mkdir('files') # make a new directory called files
