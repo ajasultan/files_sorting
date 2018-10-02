@@ -31,8 +31,20 @@ def generate_time():
         minutes = str(minutes)
     return '_'+hour+minutes
 
-    
+
 os.mkdir('files') # make a new directory called files
 os.chdir('files') # move to files directory
 cities = ['Muscat', 'London', 'Barcelona', 'Salalah', 'Manchester', 'New York'
           , 'Dubai']
+
+index = 0
+while index < 150:
+    city_name = random.choice(cities)
+    year = random.randrange(2009,2017)
+    month = random.randrange(1,12)
+    day = generate_date(month,year)
+    start = str(year)+str(month)+str(day)+"_"
+    end = generate_time()
+    file_name = start+city_name+end
+    f = open(file_name+'.txt','w+') # create a new file
+    f.close() # close created file
