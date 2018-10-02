@@ -48,3 +48,4 @@ while index < 150:
     file_name = start+city_name+end
     f = open(file_name+'.txt','w+') # create a new file
     f.close() # close created file
+    index += 1
