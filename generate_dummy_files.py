@@ -16,8 +16,22 @@ def generate_date(month,year):
         day = random.randrange(1,30)
     return day
 
-    
 
+#Function that generates a random time for the file name
+def generate_time():
+    hour = random.randrange(0,23)
+    if hour < 10:
+        hour = '0'+str(hour)
+    else:
+        hour = str(hour)
+    minutes = random.randrange(0,59)
+    if minutes < 10:
+        minutes = '0'+str(minutes)
+    else:
+        minutes = str(minutes)
+    return '_'+hour+minutes
+
+    
 os.mkdir('files') # make a new directory called files
 os.chdir('files') # move to files directory
 cities = ['Muscat', 'London', 'Barcelona', 'Salalah', 'Manchester', 'New York'
