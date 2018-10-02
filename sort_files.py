@@ -17,3 +17,7 @@ for file in files:
 
 for city in cities:
     os.mkdir(city)
+
+for file in files:
+    city_name = extract_name(file)
+    os.rename(file, city_name + "/" + file)
