@@ -14,3 +14,6 @@ for file in files:
     city_name = extract_name(file)
     if city_name not in cities:
         cities.append(city_name)
+
+for city in cities:
+    os.mkdir(city)
